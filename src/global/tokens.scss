@@ -1,0 +1,43 @@
+/**********************
+COLORS
+**********************/
+:root {
+  --dlk-color-red: #e94e1b;
+  --dlk-color-yellow: #f9b233;
+  --dlk-color-blue: #1d71b8;
+  --dlk-color-green: #89dc65;
+
+  --dlk-color-brand-primary: var(--dlk-color-green);
+  --dlk-color-brand-secondary: var(--dlk-color-blue);
+}
+/**********************
+FONTS
+**********************/
+:root {
+  --dlk-space-xs: 16px;
+}
+/**********************
+SPACES
+**********************/
+:root {
+  --dlk-space-xs: 16px;
+}
+/**********************
+BREAKPOINTS
+**********************/
+:root {
+  //Mobile devices
+  --dlk-breakpoint-xs: 577px;
+
+  //iPads, Tablets
+  --dlk-breakpoint-sm: 767px;
+
+  //Small screens, laptops
+  --dlk-breakpoint-md: 991px;
+
+  //Desktops, large screens
+  --dlk-breakpoint-lg: 1199px;
+
+  //Extra large screens, TV
+  --dlk-breakpoint-xl: 1399px;
+}
