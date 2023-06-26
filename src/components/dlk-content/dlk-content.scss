@@ -1,0 +1,23 @@
+:host {
+  background-color: rgb(222, 222, 222);
+  display: block;
+  .container {
+    display: flex;
+    align-items: center;
+    gap: var(--dlk-space-m);
+    max-width: 1200px;
+    padding: var(--dlk-space-m) var(--dlk-space-xs);
+    margin: 0 auto;
+
+    .col {
+      width: 50%;
+    }
+  }
+
+  ::slotted(img) {
+    width: 100%;
+    max-width: 100%;
+    border: 4px solid var(--dlk-color-black);
+    border-radius: 4px;
+  }
+}

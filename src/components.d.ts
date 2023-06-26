@@ -5,7 +5,30 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { alignmentType } from "./components/dlk-content/dlk-content";
+import { textType } from "./components/dlk-text/dlk-text";
+import { titleType } from "./components/dlk-title/dlk-title";
+export { alignmentType } from "./components/dlk-content/dlk-content";
+export { textType } from "./components/dlk-text/dlk-text";
+export { titleType } from "./components/dlk-title/dlk-title";
 export namespace Components {
+    interface DlkButton {
+    }
+    interface DlkContent {
+        "alignment": alignmentType;
+        "preTitle": string;
+        "title": string;
+    }
+    interface DlkList {
+    }
+    interface DlkListItem {
+    }
+    interface DlkText {
+        "type": textType;
+    }
+    interface DlkTitle {
+        "titleType": titleType;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +45,42 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLDlkButtonElement extends Components.DlkButton, HTMLStencilElement {
+    }
+    var HTMLDlkButtonElement: {
+        prototype: HTMLDlkButtonElement;
+        new (): HTMLDlkButtonElement;
+    };
+    interface HTMLDlkContentElement extends Components.DlkContent, HTMLStencilElement {
+    }
+    var HTMLDlkContentElement: {
+        prototype: HTMLDlkContentElement;
+        new (): HTMLDlkContentElement;
+    };
+    interface HTMLDlkListElement extends Components.DlkList, HTMLStencilElement {
+    }
+    var HTMLDlkListElement: {
+        prototype: HTMLDlkListElement;
+        new (): HTMLDlkListElement;
+    };
+    interface HTMLDlkListItemElement extends Components.DlkListItem, HTMLStencilElement {
+    }
+    var HTMLDlkListItemElement: {
+        prototype: HTMLDlkListItemElement;
+        new (): HTMLDlkListItemElement;
+    };
+    interface HTMLDlkTextElement extends Components.DlkText, HTMLStencilElement {
+    }
+    var HTMLDlkTextElement: {
+        prototype: HTMLDlkTextElement;
+        new (): HTMLDlkTextElement;
+    };
+    interface HTMLDlkTitleElement extends Components.DlkTitle, HTMLStencilElement {
+    }
+    var HTMLDlkTitleElement: {
+        prototype: HTMLDlkTitleElement;
+        new (): HTMLDlkTitleElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +88,33 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "dlk-button": HTMLDlkButtonElement;
+        "dlk-content": HTMLDlkContentElement;
+        "dlk-list": HTMLDlkListElement;
+        "dlk-list-item": HTMLDlkListItemElement;
+        "dlk-text": HTMLDlkTextElement;
+        "dlk-title": HTMLDlkTitleElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface DlkButton {
+    }
+    interface DlkContent {
+        "alignment"?: alignmentType;
+        "preTitle"?: string;
+        "title"?: string;
+    }
+    interface DlkList {
+    }
+    interface DlkListItem {
+    }
+    interface DlkText {
+        "type"?: textType;
+    }
+    interface DlkTitle {
+        "titleType"?: titleType;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +130,12 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "dlk-button": DlkButton;
+        "dlk-content": DlkContent;
+        "dlk-list": DlkList;
+        "dlk-list-item": DlkListItem;
+        "dlk-text": DlkText;
+        "dlk-title": DlkTitle;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +143,12 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "dlk-button": LocalJSX.DlkButton & JSXBase.HTMLAttributes<HTMLDlkButtonElement>;
+            "dlk-content": LocalJSX.DlkContent & JSXBase.HTMLAttributes<HTMLDlkContentElement>;
+            "dlk-list": LocalJSX.DlkList & JSXBase.HTMLAttributes<HTMLDlkListElement>;
+            "dlk-list-item": LocalJSX.DlkListItem & JSXBase.HTMLAttributes<HTMLDlkListItemElement>;
+            "dlk-text": LocalJSX.DlkText & JSXBase.HTMLAttributes<HTMLDlkTextElement>;
+            "dlk-title": LocalJSX.DlkTitle & JSXBase.HTMLAttributes<HTMLDlkTitleElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

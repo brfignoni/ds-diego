@@ -1,5 +1,0 @@
-@mixin max-width($breakpoint) {
-  @media (max-width: var(--dlk-breakpoint-#{$screen-lg-max})) {
-    @content;
-  }
-}

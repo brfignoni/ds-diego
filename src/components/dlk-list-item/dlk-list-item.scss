@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  font-family: var(--dlk-font-family-text);
+  color: var(--dlk-color-black);
+  font-size: var(--dlk-font-size-s);
+  line-height: var(--dlk-line-height-tight);
+  display: flex;
+  align-items: start;
+  gap: var(--dlk-space-xxs);
+
+  .icon {
+    padding-top: 8px;
+  }
+}

@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  font-family: var(--dlk-font-family-titles);
+  color: var(--dlk-color-black);
+
+  .title {
+    margin: 0;
+  }
+}

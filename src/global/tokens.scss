@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&family=Rubik:wght@400;700&display=swap');
 /**********************
 COLORS
 **********************/
@@ -6,7 +7,10 @@ COLORS
   --dlk-color-yellow: #f9b233;
   --dlk-color-blue: #1d71b8;
   --dlk-color-green: #89dc65;
+  --dlk-color-black: #241c15;
+  --dlk-color-white: #fff;
 
+  --dlk-color-text: var(--dlk-color-black);
   --dlk-color-brand-primary: var(--dlk-color-green);
   --dlk-color-brand-secondary: var(--dlk-color-blue);
 }
@@ -14,13 +18,36 @@ COLORS
 FONTS
 **********************/
 :root {
-  --dlk-space-xs: 16px;
+  /*FAMILY*/
+  --dlk-font-family-titles: 'Rubik', sans-serif;
+  --dlk-font-family-text: 'Karla', sans-serif;
+  /*SIZES*/
+  --dlk-font-size-xxs: 12px;
+  --dlk-font-size-xs: 16px;
+  --dlk-font-size-s: 20px;
+  --dlk-font-size-m: 24px;
+  --dlk-font-size-l: 28px;
+  --dlk-font-size-xl: 36px;
+  --dlk-font-size-xxl: 42px;
+  /*WEIGHT*/
+  --dlk-font-weight-light: 300;
+  --dlk-font-weight-regular: 400;
+  --dlk-font-weight-bold: 700;
+  /*LINE HEGIHT*/
+  --dlk-line-height-tight: 1.35em;
+  --dlk-line-height-regular: 1.5em;
+  --dlk-line-height-spaced: 1.75em;
 }
 /**********************
 SPACES
 **********************/
 :root {
+  --dlk-space-xxs: 8px;
   --dlk-space-xs: 16px;
+  --dlk-space-s: 32px;
+  --dlk-space-m: 64px;
+  --dlk-space-l: 128px;
+  --dlk-space-xl: 256px;
 }
 /**********************
 BREAKPOINTS
@@ -40,4 +67,13 @@ BREAKPOINTS
 
   //Extra large screens, TV
   --dlk-breakpoint-xl: 1399px;
+}
+/**********************
+MAILCHIMP
+**********************/
+:root {
+  --cta-border-radius: 2em;
+  --cta-stroke-width: 0.0625rem;
+  --cta-stroke-color: #241c15;
+  --cta-depth-color: #241c15;
 }

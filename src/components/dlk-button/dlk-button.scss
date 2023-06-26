@@ -1,0 +1,14 @@
+@import '../../global/mixins.scss';
+
+:host {
+  display: inline-flex;
+  padding: var(--dlk-space-xxs) var(--dlk-space-xs);
+  font-family: var(--dlk-font-family-text);
+  color: var(--dlk-color-black);
+  background-color: var(--dlk-color-white);
+  border: 2px solid var(--dlk-color-black);
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0 0 0 var(--cta-stroke-width, 0) var(--cta-stroke-color), 0 var(--animation-depth, 0.375em) 0 0 var(--cta-depth-color);
+  -webkit-box-shadow: 0 0 0 var(--cta-stroke-width, 0) var(--cta-stroke-color), 0 var(--animation-depth, 0.375em) 0 0 var(--cta-depth-color);
+}
